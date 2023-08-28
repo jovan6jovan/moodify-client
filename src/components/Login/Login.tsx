@@ -1,8 +1,7 @@
 import { FC } from "react";
 
-const loginUrl = import.meta.env.DEV
-  ? import.meta.env.VITE_LOGIN_URL_LOCAL
-  : import.meta.env.VITE_LOGIN_URL_PROD;
+const loginUrl = import.meta.env.VITE_LOGIN_URL_PROD;
+// import.meta.env.DEV ? import.meta.env.VITE_LOGIN_URL_LOCAL :
 
 const LoginPage: FC = () => {
   return (
