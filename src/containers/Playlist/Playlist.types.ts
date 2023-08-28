@@ -1,4 +1,4 @@
-export interface Track {
+export interface TrackItem {
   id: string;
   album: {
     images: { url: string }[];
@@ -10,7 +10,7 @@ export interface Track {
 }
 
 export interface PlaylistTrack {
-  track: Track;
+  track: TrackItem;
 }
 
 export interface PlaylistProps {

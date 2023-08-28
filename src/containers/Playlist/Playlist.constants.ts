@@ -1,6 +1,6 @@
 export const PLAYLIST_IDS = [
-  "4PvL4yFxmzR4Wo0YTcNfa5",
-  "6vJt27vc9Zy9CuZKH9m3RM",
-  "4F3wtrHCO6UeeBbG4UvQkg",
-  "0ZwtH5MFkMqSJFUUMvImnx",
+  "3jtGVRSps3aah560KCUdLp",
+  "7yQz8OFLHne3XtbVXNBgtF",
+  "4shKYWyxXBFW128Wsr53AE",
+  "5sSdccwLOF52nnSqcfTCEH",
 ];

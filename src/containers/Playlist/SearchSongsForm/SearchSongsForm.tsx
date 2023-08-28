@@ -1,5 +1,6 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import SpotifyApi from "../../../api/spotify";
+import { TrackItem } from "../Playlist.types";
 import Track from "../Track";
 import { SearchSongsFormProps } from "./SearchSongsForm.types";
 
@@ -8,7 +9,7 @@ const SearchSongsForm: FC<SearchSongsFormProps> = ({
   refreshPlaylistData,
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<any | []>([]);
+  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   const handleSearchInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -31,7 +32,7 @@ const SearchSongsForm: FC<SearchSongsFormProps> = ({
     : "hover:bg-blue-600";
 
   return (
-    <div className="mt-8 md:mt-4 mb-8 px-4">
+    <div className="mt-4 mb-8 px-4">
       <p className="mb-2 text-lg font-semibold">
         Want to add a song to the playlist?
       </p>
@@ -51,7 +52,7 @@ const SearchSongsForm: FC<SearchSongsFormProps> = ({
           Search
         </button>
       </form>
-      {searchResults.map((track: any) => (
+      {searchResults.map((track: TrackItem) => (
         <Track
           key={track.id}
           track={track}

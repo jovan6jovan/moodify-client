@@ -3,6 +3,7 @@ import LoadingSpinner from "../../components/LoadingSpinner/";
 import usePlaylistData from "../../hooks/usePlaylistData";
 import { Context } from "../../store/context";
 import { PLAYLIST_IDS } from "./Playlist.constants";
+import { PlaylistTrack } from "./Playlist.types";
 import SearchSongsForm from "./SearchSongsForm/";
 import Track from "./Track";
 
@@ -20,11 +21,11 @@ const Playlist: FC = () => {
   }, [selectedMoodId]);
 
   return (
-    <div className="container max-w-5xl mx-auto flex flex-col md:flex-row justify-between">
+    <div className="container mx-auto max-w-7xl px-4 md:px-0 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
       {loading && <LoadingSpinner />}
       {error && <p className="text-red-500">Error: {error}</p>}
       <div className="md:w-2/3">
-        {playlistData?.tracks?.items.map((trackItem: any) => (
+        {playlistData?.tracks?.items.map((trackItem: PlaylistTrack) => (
           <Track
             key={trackItem.track.id}
             track={trackItem.track}

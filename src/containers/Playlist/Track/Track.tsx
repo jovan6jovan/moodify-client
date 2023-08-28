@@ -42,13 +42,23 @@ const Track: FC<TrackProps> = ({
   };
 
   return (
-    <div className="flex flex-wrap items-center space-x-4 p-4 border-b border-gray-300">
-      <img
-        src={track.album.images[0].url}
-        alt={track.name}
-        className="w-24 h-24"
-      />
-      <div className="flex-1">
+    <div
+      className={`flex flex-col ${
+        isAddMode
+          ? "md:flex-column py-4"
+          : "md:flex-row md:items-center md:space-x-4 p-4"
+      } border-b border-gray-300`}
+    >
+      {!isAddMode && (
+        <div className="md:w-24 md:h-24 flex items-center justify-center md:block">
+          <img
+            src={track.album.images[0].url}
+            alt={track.name}
+            className="w-16 h-16 md:w-24 md:h-24 mx-auto md:mx-0"
+          />
+        </div>
+      )}
+      <div className="flex-1 text-center md:text-left">
         <h3 className="text-lg font-semibold">{track.name}</h3>
         <p className="text-gray-600 mb-2">{formatArtistNames(track.artists)}</p>
         <audio controls>
@@ -56,15 +66,17 @@ const Track: FC<TrackProps> = ({
           Your browser does not support the audio element.
         </audio>
       </div>
-      {isAddMode ? (
-        <button className="text-green-700" onClick={handleAdd}>
-          Add
-        </button>
-      ) : (
-        <button className="text-red-500" onClick={handleRemove}>
-          Remove
-        </button>
-      )}
+      <div className={`mt-4 ${isAddMode ? "" : "md:mt-0"}`}>
+        {isAddMode ? (
+          <button className="text-green-700" onClick={handleAdd}>
+            Add
+          </button>
+        ) : (
+          <button className="text-red-500" onClick={handleRemove}>
+            Remove
+          </button>
+        )}
+      </div>
 
       {showModal && (
         <ConfirmationModal
