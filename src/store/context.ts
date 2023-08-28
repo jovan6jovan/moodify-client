@@ -7,7 +7,7 @@ import { ContextType } from "./types";
 export const Context = createContext<ContextType>({
   state: initialState,
   dispatch: () => {}, // Placeholder function for dispatch
-  updateEmoji: (moodId: number, emoji: string) => {}, // Placeholder function for updating emoji
-  updateColor: (moodId: number, color: string) => {}, // Placeholder function for updating color
-  selectMood: (moodId: number) => {}, // Placeholder function for selecting mood
+  updateEmoji: (_moodId: number, _emoji: string) => {}, // Placeholder function for updating emoji
+  updateColor: (_moodId: number, _color: string) => {}, // Placeholder function for updating color
+  selectMood: (_moodId: number) => {}, // Placeholder function for selecting mood
 });
