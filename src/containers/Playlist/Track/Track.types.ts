@@ -1,7 +1,7 @@
-import { Track } from "../Playlist.types";
+import { TrackItem } from "../Playlist.types";
 
 export interface TrackProps {
-  track: Track;
+  track: TrackItem;
   playlistId: string;
   refreshPlaylistData: () => void;
   isAddMode?: boolean;
