@@ -1,5 +1,9 @@
 import { FC } from "react";
 
+const loginUrl = import.meta.env.DEV
+  ? import.meta.env.VITE_LOGIN_URL_LOCAL
+  : import.meta.env.VITE_LOGIN_URL_PROD;
+
 const LoginPage: FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -14,7 +18,7 @@ const LoginPage: FC = () => {
           Just click the "Login" button below to get started.
         </p>
         <a
-          href={import.meta.env.VITE_LOGIN_URL}
+          href={loginUrl}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full inline-block transition duration-300"
         >
           Login
