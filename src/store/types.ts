@@ -9,7 +9,6 @@ export enum ActionType {
 export interface Mood {
   id: number;
   name: string;
-  // songs or playlist: something;
   color: string;
   emoji: string;
 }
