@@ -14,14 +14,11 @@ const LoginPage: FC = () => {
           the Spotify API does not support such an approach.
         </p>
         <p className="text-gray-600">
-          If required, please input the credentials I've provided you through
-          email.
-        </p>
-        <p className="text-gray-600 mt-4 mb-6">
-          Just click the "Login" button below to get started.
+          Please input the credentials I've provided you through email, and
+          click the "Login" button below to get started.
         </p>
         <a
-          href={import.meta.env.VITE_LOGIN_URL_LOCAL}
+          href={import.meta.env.VITE_LOGIN_URL_PROD}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full inline-block transition duration-300"
         >
           Login
