@@ -14,8 +14,12 @@ const LoginPage: FC = () => {
           the Spotify API does not support such an approach.
         </p>
         <p className="text-gray-600">
-          Please input the credentials I've provided you through email, and
-          click the "Login" button below to get started.
+          Input the credentials I've provided you through email, and click the{" "}
+          <strong>Login</strong> button below to get started.
+        </p>
+        <p className="text-gray-600 mt-4 mb-6">
+          Please be patient as the initial login process might be slower than
+          usual for reasons beyond my control.
         </p>
         <a
           href={import.meta.env.VITE_LOGIN_URL_PROD}
