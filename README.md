@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# Moodify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Moodify is a music playlist application that provides personalized playlists based on your mood. You can manage playlists using the Spotify Web API in the background.
+It's built with React, TypeScript, Tailwind CSS, Vite, and utilizes the Spotify Web API for fetching and managing playlist data.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- Vitest (Jest for testing)
+- Spotify Web API
+- Express (for serving API endpoints)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Mood selection and management
+- Edit existing playlist songs using the Spotify Web API.
+- Search and add tracks from Spotify's vast music library to existing playlists.
+- User authentication via the Spotify Web API.
 
-- Configure the top-level `parserOptions` property like this:
+## Hosting
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+The Moodify client application is hosted on Netlify. You can access it here: [Moodify Client](https://moodify-client.netlify.app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The backend server is hosted on Render. It's used to handle some API endpoints required for the application.
+
+[Git repository](https://github.com/jovan6jovan/moodify-client)
